@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <style>
+        *{
+            background-color: wheat;
+        }
+        h1{
+            color: chocolate;
+            color: rgba(245, 221,11,0.7);
+        }
+        #first{
+            color: red;
+        }
+        .second{
+            background-color: black;
+            color: white;
+        }
+        .divfirst{
+            color: blue;
+            
+        }
+        .divfirst h2{
+            color: green;
+        }
+        li:first-child{
+            color: red;
+        }
+        li:nth-child(3){
+            color: blue;
+        }
+        li:nth-child(2):hover{
+            color: brown;
+            font-size: 2rem;
+            list-style: circle;
+            cursor: grab;
+            text-decoration:overline dashed blue;
+            font-weight:lighter;
+            text-align: center;
+
+        }
+        p::before{
+            content: 'all ';
+            color: greenyellow;
+
+        }
+        p::after{
+            content: 'some';
+            color: red;
+        }
+    </style>
+</head>
+<body>
+   <h1>Heading one</h1> 
+   <p id="first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium dolorum itaque molestias ipsum asperiores est at nam nisi atque nobis!</p>
+   <p class="second">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, delectus!</p>
+   <div class="divfirst">
+    <h2>Heading 2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat saepe architecto facilis assumenda ab nihil, maiores neque dolores officia odio consectetur commodi ipsa beatae repudiandae nostrum quae sint ducimus ullam?</p>
+   </div>
+   <ul>
+    <li>Home</li>
+    <li>About</li>
+    <li>Service</li>
+    <li>Contact</li>
+   </ul>
+</body>
+</html>
