@@ -6,24 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@100&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+        :root{
+            --main-color: #FF80FF;
+        }
         *{
             padding: 0;
             margin: 0;
             box-sizing: border-box;
         }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
         body{
-            font-family: "Pacifico","sans-serif";
+            font-family:  "Poppins", sans-serif;;
         }
         .main{
             height: 100vh;
+            display: grid;
+            grid-template-columns: 4fr 1fr;
+            grid-template-areas:
+            "header header"
+            "section1 side"
+            "section2 side"
+            "section3 side"
+            "footer footer" ;
+        }
+        .navbar{
+            grid-area: header;
+            background-color: var(--main-color);
+
+        }
+        .sidebar{
+            grid-area: side;
+            background-color: aqua;
+        }
+        .section1{
+            grid-area: section1;
+        }
+        .section2{
+            grid-area: section2;
+        }
+        .section3{
+            grid-area: section3;
         }
     </style>
 </head>
 <body>
     <div class="main">
         <div class="navbar">
-            <div class="navmenu">
+            <div class="nav-menu">
                 <ul>
                     <li class="nav-item">HOME</li>
                     <li class="nav-item">OUR TEAM</li>
@@ -38,15 +73,39 @@
                 </form>
             </div>
         </div>
-        <div class="sidebar">
-            <h1>Related</h1>
-            <ul>
-                <li>Sample1</li>
-                <li>Sample2</li>
-                <li>Sample3</li>
-                <li>Sample4</li>
-            </ul>
-        </div>
+       <!---------nav bar end-->
+       <div class="section1">
+        <h1>Article Heading</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam fuga molestiae quae accusantium sunt voluptatibus sapiente. Laboriosam possimus provident perferendis!</p>
+       </div>
+       <!----------Section1 end-->
+       <div class="sidebar">
+        <h1>Related</h1>
+        <ul>
+            <li>Sample1</li>
+            <li>Sample2</li>
+            <li>Sample3</li>
+            <li>Sample4</li>
+        </ul>
+    </div>
+    <!-------side bar end-->
+    <div class="section2">
+        <h2>Subsection</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero sint omnis totam explicabo debitis ullam.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae consequuntur laudantium quas, sed dolorem officia?</p>
+
+    </div>
+    <!-----------Section2 end-->
+    <div class="section3">
+        <h2>Subsection</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero sint omnis totam explicabo debitis ullam.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae consequuntur laudantium quas, sed dolorem officia?</p>
+
+    </div>
+    <!-----------Section3 end-->
+    <footer>
+        <p>(c)CopyRights 2050. All Rights Reserved</p>
+    </footer>
     </div>
     
 </body>
